@@ -20,7 +20,7 @@ public class VcardSpringApplication {
 	
 	public static ArrayList<Empleado> leerArchivo() {
 		// crea el flujo para leer desde el archivo
-		File file = new File("C:\\Curso\\Spring5\\workspace\\vcard-spring\\src\\main\\resources\\static\\empleados.txt");
+		File file = new File("C:..\\vcard-spring\\src\\main\\resources\\static\\empleados.txt");
 		ArrayList<Empleado> listaEmpleados= new ArrayList<>();	
 		Scanner scanner;
 		try {
