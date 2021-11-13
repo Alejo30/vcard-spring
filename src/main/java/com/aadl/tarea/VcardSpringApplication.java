@@ -37,6 +37,10 @@ public class VcardSpringApplication {
 				Empleado e= new Empleado();
 				e.setNombres(delimitar.next());
 				e.setApellidos(delimitar.next());
+				e.setHorario(delimitar.next());
+				e.setCorreo(delimitar.next());
+				e.setCelular(delimitar.next());
+				e.setPaginaWeb(delimitar.next());
 				listaEmpleados.add(e);
 				System.out.println(listaEmpleados);
 				for(Empleado emp:listaEmpleados) {
