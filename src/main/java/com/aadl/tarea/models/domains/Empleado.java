@@ -97,4 +97,15 @@ public class Empleado {
 		this.cargo = cargo;
 	}
 
+	public Empleado() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Empleado [nombres=" + nombres + ", apellidos=" + apellidos + "]";
+	}
+	
+	
+
 }
