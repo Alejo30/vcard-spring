@@ -4,6 +4,17 @@ public class Cargo {
 
 	private Integer cargoId;
 	private String nombreCargo;
+	
+	
+	
+	public Cargo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cargo(Integer cargoId, String nombreCargo) {
+		this.cargoId = cargoId;
+		this.nombreCargo = nombreCargo;
+	}
 
 	public Integer getCargoId() {
 		return cargoId;
@@ -21,9 +32,11 @@ public class Cargo {
 		this.nombreCargo = nombreCargo;
 	}
 
-	public Cargo(Integer cargoId, String nombreCargo) {
-		this.cargoId = cargoId;
-		this.nombreCargo = nombreCargo;
+	@Override
+	public String toString() {
+		return "" + nombreCargo + "";
 	}
+
+	
 
 }

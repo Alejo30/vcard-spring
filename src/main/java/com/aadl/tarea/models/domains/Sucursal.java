@@ -4,21 +4,36 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Sucursal {
-	private Ciudad ciudad;
-	private Integer codigoSucursal;
+	
+	private String codigoSucursal;
+	private String ciudad;
 	private String nombreSucursal;
 	
 	
-	public Ciudad getCiudad() {
+
+	public Sucursal() {
+	
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Sucursal( String codigoSucursal, String ciudad, String nombreSucursal) {
+		this.ciudad = ciudad;
+		this.codigoSucursal = codigoSucursal;
+		this.nombreSucursal = nombreSucursal;
+	}
+	
+	
+	public String getCiudad() {
 		return ciudad;
 	}
-	public void setCiudad(Ciudad ciudad) {
+	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-	public Integer getCodigoSucursal() {
+	public String getCodigoSucursal() {
 		return codigoSucursal;
 	}
-	public void setCodigoSucursal(Integer codigoSucursal) {
+	public void setCodigoSucursal(String codigoSucursal) {
 		this.codigoSucursal = codigoSucursal;
 	}
 	public String getNombreSucursal() {
@@ -27,6 +42,15 @@ public class Sucursal {
 	public void setNombreSucursal(String nombreSucursal) {
 		this.nombreSucursal = nombreSucursal;
 	}
+
+
+	@Override
+	public String toString() {
+		return "" + codigoSucursal + "," + ciudad + ","
+				+ nombreSucursal + "";
+	}
+	
+	
 	
 	
 }

@@ -4,7 +4,6 @@ public class Empleado {
 
 	private String nombres;
 	private String apellidos;
-	private Ciudad ciudad;
 	private Sucursal sucursal;
 	private String horario;
 	private String correo;
@@ -26,14 +25,6 @@ public class Empleado {
 
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
-	}
-
-	public Ciudad getCiudad() {
-		return ciudad;
-	}
-
-	public void setCiudad(Ciudad ciudad) {
-		this.ciudad = ciudad;
 	}
 
 	public Sucursal getSucursal() {
@@ -84,11 +75,10 @@ public class Empleado {
 		this.cargo = cargo;
 	}
 
-	public Empleado(String nombres, String apellidos, Ciudad ciudad, Sucursal sucursal, String horario, String correo,
+	public Empleado(String nombres, String apellidos, Sucursal sucursal, String horario, String correo,
 			String celular, String paginaWeb, Cargo cargo) {
 		this.nombres = nombres;
 		this.apellidos = apellidos;
-		this.ciudad = ciudad;
 		this.sucursal = sucursal;
 		this.horario = horario;
 		this.correo = correo;
@@ -103,7 +93,7 @@ public class Empleado {
 
 	@Override
 	public String toString() {
-		return "Empleado [nombres=" + nombres + ", apellidos=" + apellidos + ", ciudad=" + ciudad + ", sucursal="
+		return "Empleado [nombres=" + nombres + ", apellidos=" + apellidos + ", sucursal="
 				+ sucursal + ", horario=" + horario + ", correo=" + correo + ", celular=" + celular + ", paginaWeb="
 				+ paginaWeb + ", cargo=" + cargo + "]";
 	}

@@ -1,2 +1,2 @@
-David,Cajamarca,Lunes - Viernes (8:00AM - 5:00PM),davidcg20123@gmail.com,0989538642,https://www.facebook.com/canofutbolero
-Lina,Orellana,Lunes - Viernes (9:00AM - 6:00PM),linaOrellana@gmail.com,0988787654,sin página web
+Luis Alejandro, Coraizaca Quizhpi, 1,Cuenca,Sucursal Cuenca 0014, Lunes - Viernes (9:00AM - 6:00PM), alejocoraizaca@gmail.com, 0984839462, https://www.facebook.com/canofutbolero, Marketing,
+Lina Mercedes, Orellana Yungaicela, 1,Cuenca,Sucursal Cuenca 0014, Lunes - Viernes (9:00AM - 6:00PM), lina.orellana@gmail.com, 0984839462, https://www.facebook.com/canofutbolero, Marketing,
