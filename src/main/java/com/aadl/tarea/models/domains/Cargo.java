@@ -2,7 +2,7 @@ package com.aadl.tarea.models.domains;
 
 public class Cargo {
 
-	private Integer cargoId;
+	private String cargoId;
 	private String nombreCargo;
 	
 	
@@ -11,16 +11,16 @@ public class Cargo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cargo(Integer cargoId, String nombreCargo) {
+	public Cargo(String cargoId, String nombreCargo) {
 		this.cargoId = cargoId;
 		this.nombreCargo = nombreCargo;
 	}
 
-	public Integer getCargoId() {
+	public String getCargoId() {
 		return cargoId;
 	}
 
-	public void setCargoId(Integer cargoId) {
+	public void setCargoId(String cargoId) {
 		this.cargoId = cargoId;
 	}
 
@@ -34,8 +34,10 @@ public class Cargo {
 
 	@Override
 	public String toString() {
-		return "" + nombreCargo + "";
+		return  cargoId + "," + nombreCargo;
 	}
+
+	
 
 	
 

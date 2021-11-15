@@ -1,2 +1,4 @@
-Luis Alejandro, Coraizaca Quizhpi, 1,Cuenca,Sucursal Cuenca 0014, Lunes - Viernes (9:00AM - 6:00PM), alejocoraizaca@gmail.com, 0984839462, https://www.facebook.com/canofutbolero, Marketing,
-Lina Mercedes, Orellana Yungaicela, 1,Cuenca,Sucursal Cuenca 0014, Lunes - Viernes (9:00AM - 6:00PM), lina.orellana@gmail.com, 0984839462, https://www.facebook.com/canofutbolero, Marketing,
+1,Jose Armando, Aucapiña Peralta, 1,Cuenca,Sucursal Cuenca 001, Lunes - Viernes (9:00AM - 5:00PM), armando.aucapina.est@tecazuay.edu.ec, 0969782854, https://www.facebook.com/armando.aucapina.7, 3, Cosultor
+2,David Alexander, Cajamarca Gavilanes, 1,Cuenca,Sucursal Cuenca 002, Lunes - Viernes (9:00AM - 6:00PM), david.cajamarca.est@tecazuay.edu.ec, 0989538642, https://www.facebook.com/canofutbolero, 1,Gerente
+3,Luis Alejandro, Coraizaca Quizhpi, 1,Cuenca,Sucursal Cuenca 003, Lunes - Viernes (9:00AM - 6:00PM), alejandro.coraizaca.est@tecazuay.edu.ec, 0984839462, https://www.facebook.com/byteochobits, 4,Marketing
+4,Lina Mercedes, Orellana Yungaicela, 1,Cuenca,Sucursal Cuenca 004, Lunes - Viernes (9:00AM - 6:00PM), lina.orellana.est@tecazuay.edu.ec, 0996503200, https://www.facebook.com/fernando.lina.5283, 3,Tecnica

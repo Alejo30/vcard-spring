@@ -5,195 +5,134 @@
 	<meta charset="UTF-8" />
 	<!--<title th:text="${titulo}"></title>-->
 	<title>Vcard</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 
-<body>
-<div>
-		<h2>LISTA VCARDS</h2>
-	<table class="table">
+<header>
+  <!--<title th:text="${titulo}"></title>-->
+  <ul id="nav">
+    <li id="navi"><a class="active" href="http://localhost:8080/">Home</a></li>
+  </ul>
+</header>
 
-		<tbody>
-			<tr>
-				<td style="background-color: coral;" align="center">
-					<!--Para abrir imagen de mi carpeta statica-->
-					<img src="ejemplo.png" alt="Error al cargar imagen"><br>
-					LINA MERCEDES<br>
-					ORELLANA YUINGAICELA<br>
-					ADMIN<br>
-					CUENCA - ECUADOR<br>
-				</td >
-				<td>
-				<a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank"><img src="avatar.png" alt="Error al cargar imagen"></a >
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color: azure;"  align="center">
-					<!--Para abrir imagen de mi carpeta statica-->
-					<img src="ejemplo.png" alt="Error al cargar imagen"><br>
-					LINA MERCEDES<br>
-					ORELLANA YUINGAICELA<br>
-					ADMIN<br>
-					CUENCA - ECUADOR<br>
-				</td >
-				<td>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color: beige;"  align="center">
-					<!--Para abrir imagen de mi carpeta statica-->
-					<img src="ejemplo.png" alt="Error al cargar imagen"><br>
-					LINA MERCEDES<br>
-					ORELLANA YUINGAICELA<br>
-					ADMIN<br>
-					CUENCA - ECUADOR<br>
-				</td >
-				<td>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color: floralwhite;"  align="center">
-					<!--Para abrir imagen de mi carpeta statica-->
-					<img src="ejemplo.png" alt="Error al cargar imagen"><br>
-					LINA MERCEDES<br>
-					ORELLANA YUINGAICELA<br>
-					ADMIN<br>
-					CUENCA - ECUADOR<br>
-				</td >
-				<td>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-					ejmeplo 2<hr>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div>
+<body>
+  <h1></h1>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="container-fluid">
+  <div th:each= "emp: ${empleados.empleados}">
 		<div class="card">
-        <div class="image">
-          <img src="ejemplo.png"/>
-        </div>
-        <div class="details">
-          <div class="center">
-            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
-            <p>Azogues, Ecuador</p>
-            <p>bytron Solutions</p>
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
+      <div class="image">
+        <img th:src="@{${'/imagenes/' + emp.id + '.png'}}"/>
+      </div>
+      <div class="details">
+        <div class="center">
+          <i class="fa fa-user fa-2x"></i>
+          <h1 th:text="${emp.nombres}"></h1>
+          <h1 th:text="${emp.apellidos}"></h1>
+          <b>Cargo: </b>
+          <p th:text="${emp.cargo.nombreCargo}"></p>
+          <b>Sucursal: </b><p th:text="${emp.sucursal.ciudad}"></p>
+          <b>Horario: </b>
+          <p th:text="${emp.horario}"></p>
+          <b>Correo: </b>
+          <p th:text="${emp.correo}"></p>
+
+          <b>Celular: </b>
+          <p th:text="${emp.celular}"></p>
+          <b>Pagina Web: </b>
+          <ul>
+            <li><a th:href="@{${emp.paginaWeb}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          </ul>
         </div>
       </div>
-      <br>
-		<br>
-      <div class="card">
-        <div class="image">
-          <img src="ejemplo.png"/>
-        </div>
-        <div class="details">
-          <div class="center">
-            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
-            <p>Azogues, Ecuador</p>
-            <p>bytron Solutions</p>
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <br>
-<br>
-      <div class="card">
-        <div class="image">
-          <img src="ejemplo.png"/>
-        </div>
-        <div class="details">
-          <div class="center">
-            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
-            <p>Azogues, Ecuador</p>
-            <p>bytron Solutions</p>
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <br>
-<br>
-      <div class="card">
-        <div class="image">
-          <img src="ejemplo.png"/>
-        </div>
-        <div class="details">
-          <div class="center">
-            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
-            <p>Azogues, Ecuador</p>
-            <p>bytron Solutions</p>
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  </div>
+  <br>
+  <br>
 </div>
+
+</div>
+
+
+		
+		<!--
+      <div class="card">
+        <div class="image">
+          <img src="ejemplo.png"/>
+        </div>
+        <div class="details">
+          <div class="center">
+            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
+            <p>Azogues, Ecuador</p>
+            <p>bytron Solutions</p>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+<br>
+      <div class="card">
+        <div class="image">
+          <img src="ejemplo.png"/>
+        </div>
+        <div class="details">
+          <div class="center">
+            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
+            <p>Azogues, Ecuador</p>
+            <p>bytron Solutions</p>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+<br>
+      <div class="card">
+        <div class="image">
+          <img src="ejemplo.png"/>
+        </div>
+        <div class="details">
+          <div class="center">
+            <h1>Alejandro Coraizaca<br><span>Ejecutivo de Ventas</span></h1>
+            <p>Azogues, Ecuador</p>
+            <p>bytron Solutions</p>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>-->
+
+
+
 
 
 </body>

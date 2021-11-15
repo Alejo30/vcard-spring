@@ -2,6 +2,7 @@ package com.aadl.tarea.models.domains;
 
 public class Empleado {
 
+	private String id;
 	private String nombres;
 	private String apellidos;
 	private Sucursal sucursal;
@@ -10,6 +11,14 @@ public class Empleado {
 	private String celular;
 	private String paginaWeb;
 	private Cargo cargo;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getNombres() {
 		return nombres;
@@ -75,8 +84,9 @@ public class Empleado {
 		this.cargo = cargo;
 	}
 
-	public Empleado(String nombres, String apellidos, Sucursal sucursal, String horario, String correo,
+	public Empleado(String id, String nombres, String apellidos, Sucursal sucursal, String horario, String correo,
 			String celular, String paginaWeb, Cargo cargo) {
+				this.id = id;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.sucursal = sucursal;
